@@ -47,13 +47,12 @@
         passwordInput.value = "";
         var emailValue = email;
         var passwordValue = password;
-        
         if (email === "funcionario@ipcontrol.com" && password === "funcionario123") {
         window.location.href = "telaFuncionario.html";
         } 
-        if (email === "coordenador@ipcontrol.com" && password === "coordenador123") {
+       if (email === "coordenador@ipcontrol.com" && password === "coordenador123") {
         window.location.href = "telaCoordenador.html";
-        } else {
+        } if (email !== "coordenador@ipcontrol.com" && password !== "coordenador123" && email !== "funcionario@ipcontrol.com" && password !== "funcionario123"){
         alert("Email ou senha incorretos. Por favor, tente novamente.");}
         emailInput.focus();
       }
