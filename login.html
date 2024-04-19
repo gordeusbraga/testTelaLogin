@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de Login</title>
-    <link rel="stylesheet" href="styleLogin.css">
+    <link rel="stylesheet" href="style/styleLogin.css">
 </head>
 <body>
     
@@ -19,20 +19,45 @@
             </p>
         </section>
         <div id="inputs" class="input-with-icon">
-            <img class="icone"  src="🦆 icon _Envelope icon_.png" alt="email">
-            <input id="inpt1" type="email" placeholder="Email" > 
-            <img class="icone2" src="🦆 icon _password_.png" alt="senha">
+            <img class="icone"  src="image/🦆 icon _Envelope icon_.png" alt="email">
+            <input id="inpt1"  type="email" placeholder="Email" > 
+            <img class="icone2" src="image/🦆 icon _password_.png" alt="senha">
             <input id="inpt2" type="password" placeholder="Senha" inputmode="email">
         </div>
     </div>
 
     <div id="btn">
 
-        <button>Acessar</button>
+        <button onclick="clicou()"  >Acessar</button>
 
     </div>
     <footer>
         <p>IP-Control</p>
     </footer>
+    <script>
+        
+       function clicou(){
+        var emailInput = document.getElementById("inpt1");
+        var passwordInput = document.getElementById("inpt2");
+    
+        var email = emailInput.value;
+        var password = passwordInput.value;
+
+        emailInput.value = "";
+        passwordInput.value = "";
+        var emailValue = email;
+        var passwordValue = password;
+        
+        if (email === "funcionario@ipcontrol.com" && password === "funcionario123") {
+        window.location.href = "telaFuncionario.html";
+        } 
+        if (email === "coordenador@ipcontrol.com" && password === "coordenador123") {
+        window.location.href = "telaCoordenador.html";
+        } else {
+        alert("Email ou senha incorretos. Por favor, tente novamente.");}
+        emailInput.focus();
+      }
+      
+    </script>
 </body>
 </html>
